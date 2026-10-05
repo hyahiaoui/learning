@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD013 -->
-# TODO
+# Learning list
 
 An unordered list of things I want to play with (yeah, there are a lot 😅)
 
