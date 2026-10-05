@@ -1,0 +1,50 @@
+[project]
+site_name = "hyahiaoui's learning repository"
+site_description = "Documentation for hyahiaoui's learning repo"
+site_dir = ".docs_build"
+repo_url = "https://github.com/hyahiaoui/learning"
+repo_name = "hyahiaoui/learning"
+edit_uri = "edit/main/docs/"
+
+[project.theme]
+variant = "modern"
+features = [
+  "content.code.copy",
+  "content.action.edit",
+  "content.action.view",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.top",
+  "navigation.tracking",
+]
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "material/brightness-7"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "material/brightness-4"
+toggle.name = "Switch to light mode"
+
+# Declaring any extension replaces Zensical's whole default set, so this list
+# is exactly what gets enabled.
+[project.markdown_extensions]
+toc.permalink = "#"
+admonition = {}
+pymdownx.details = {}
+pymdownx.highlight = { use_pygments = true, auto_title = true }
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.tasklist.custom_checkbox = true
+# GitHub/Obsidian `> [!NOTE]` callouts; the mkdocs-callouts plugin compiled down to this anyway.
+pymdownx.quotes.callouts = true

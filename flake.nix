@@ -104,6 +104,7 @@
         pkgs.mkShellNoCC {
           packages = with pkgs; [
             fish
+            go-task
 
             # For documentation
             zensical

@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD001 MD013 -->
+<!-- markdownlint-disable MD013 -->
 # TODO
 
 An unordered list of things I want to play with (yeah, there are a lot 😅)

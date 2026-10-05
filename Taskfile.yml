@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+tasks:
+  default:
+    desc: List available tasks 
+    cmds:
+      - task --list
+    silent: true
+
+  docs:serve:
+    desc: Serve the documentation locally with live-reload (http://localhost:8000)
+    preconditions:
+      - &zensical
+        sh: command -v zensical
+        msg: "Error: zensical not found. Run 'nix develop' first."
+    cmds:
+      - zensical serve --open
+
+  docs:build:
+    desc: Build the static documentation site into site_dir (.docs_build)
+    preconditions:
+      - *zensical
+    cmds:
+      - zensical build --clean
+
+  check:
+    desc: Evaluate every flake output, then run the git hooks in a sandbox
+    cmds:
+      - nix flake check --all-systems --print-build-logs --verbose
+    silent: true
+
+  fmt:
+    desc: Format and lint all files
+    cmds:
+      - nix fmt
+    silent: true
