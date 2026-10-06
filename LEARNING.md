@@ -13,3 +13,4 @@ An unordered list of things I want to play with (yeah, there are a lot 😅)
 - Practicing Python (or another language) using [Practical Python Projects](https://practicalpython.yasoob.me/toc).
 - [How to Build an MCP Server in Python](https://www.digitalocean.com/community/tutorials/mcp-server-python)
 - Learning Haskell using the (updated version of the) classical [Learn You a Haskell for Great Good!](https://learnyouahaskell.github.io/chapters.html).
+- [Learn Haskell by building a blog generator](https://learn-haskell.blog/).
