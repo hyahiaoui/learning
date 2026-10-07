@@ -108,6 +108,10 @@
 
             # For documentation
             zensical
+
+            # For fast-htmx
+            uv
+            python314
           ];
 
           shellHook = ''
