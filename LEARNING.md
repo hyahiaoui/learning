@@ -14,3 +14,4 @@ An unordered list of things I want to play with (yeah, there are a lot 😅)
 - [How to Build an MCP Server in Python](https://www.digitalocean.com/community/tutorials/mcp-server-python)
 - Learning Haskell using the (updated version of the) classical [Learn You a Haskell for Great Good!](https://learnyouahaskell.github.io/chapters.html).
 - [Learn Haskell by building a blog generator](https://learn-haskell.blog/).
+- [Chrome Extension Tutorial (2026): Build & Publish with Manifest V3](https://www.youtube.com/watch?v=EYbWVXTF-hA)
