@@ -58,6 +58,9 @@
           # Spell checker
           typos.enable = true;
 
+          # JS/TS/JSON linter
+          oxlint.enable = true;
+
           # See others in https://github.com/cachix/git-hooks.nix#built-in-hooks
         };
 
