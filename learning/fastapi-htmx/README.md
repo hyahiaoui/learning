@@ -5,6 +5,8 @@ This is a study folder for [FastAPI + HTMX: The No-Build Full-Stack](https://bla
 
 ## 1. New project setup
 
+The following is not part of the tutorial, per se. It only setups a new `fastapi` application, with modern tools (`uv`, `pydantic`, `uvicorn` and `jinja2`).
+
 1. Add `uv` and `python314` to the flake `packages`, then run `nix develop` (if you did not already set-up `direnv`).
 2. Init the Python project
 
@@ -21,17 +23,17 @@ This is a study folder for [FastAPI + HTMX: The No-Build Full-Stack](https://bla
 
 3. Add the first requirements (we will only need `fastapi` in this first step)
 
-    * [fastapi](https://fastapi.tiangolo.com/) (without the `fastapi-cloud-cli`, which allows to deploy to FastAPI Cloud.)
+    * [fastapi](https://fastapi.tiangolo.com/), without `standard` dependencies, nor the `fastapi-cloud-cli` (which allows to deploy to FastAPI Cloud), as development server will run using `uvicorn`.
     * [jinja2](https://jinja.palletsprojects.com/en/stable/)
     * [Pydantic](https://pydantic.dev/docs/validation/latest/get-started/)
     * [nh3](https://nh3.readthedocs.io/en/latest/), a Python bindings to the [ammonia](https://github.com/rust-ammonia/ammonia) HTML sanitization library (prevents cross-site scripting, layout breaking, and clickjacking caused by untrusted user-provided HTML being mixed into a larger web page).
     * [uvicorn](https://uvicorn.dev/)
 
     ```shell
-    uv add fastapi[standard-no-fastapi-cloud-cli] jinja2 pydantic nh3 uvicorn
+    uv add fastapi jinja2 pydantic nh3 uvicorn
     ```
 
-4. Create an initial `main.py` file, in `src/fastapi_htmx`
+4. Create an initial `main.py` file, in `src/app`
 
     ```python
     from fastapi import FastAPI
@@ -48,11 +50,11 @@ This is a study folder for [FastAPI + HTMX: The No-Build Full-Stack](https://bla
 
     ```toml
     [tool.fastapi]
-    entrypoint = "fastapi_htmx.main:app"
+    entrypoint = "app.main:app"
     ```
 
 6. Run this initial app using
 
     ```shell
-    uv run fastapi dev
+    uv run uvicorn app.main:app --reload
     ```
